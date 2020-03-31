@@ -26,8 +26,13 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
 
+    - name: Default working dir
+      run: pwd
+
     - name: Build
       run: build.bash
+      working-directory: GITHUB_WORKSPACE
 
     - name: Run Tests
       run: run_tests.bash
+      working-directory: GITHUB_WORKSPACE
