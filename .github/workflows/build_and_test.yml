@@ -23,11 +23,13 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Install bash
-      run: sudo apt install bash -y
+    - name: Install dependencies
+      run: sudo apt install bash tree -y
 
     - name: Default working dir
-      run: pwd
+      run: |
+        pwd
+        tree
       
     - name: Workspace dir
       run: echo $GITHUB_WORKSPACE
