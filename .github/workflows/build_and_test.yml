@@ -33,10 +33,6 @@ jobs:
       
     - name: Workspace dir
       run: echo $GITHUB_WORKSPACE
-
-    - name: one
-      run: pwd
-      working-directory: github.workspace
   
     - name: two
       run: pwd
