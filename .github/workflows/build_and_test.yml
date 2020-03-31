@@ -31,8 +31,8 @@ jobs:
 
     - name: Build
       run: build.bash
-      working-directory: GITHUB_WORKSPACE
+      working-directory: ${{ GITHUB_WORKSPACE }}
 
     - name: Run Tests
       run: run_tests.bash
-      working-directory: GITHUB_WORKSPACE
+      working-directory: ${{ GITHUB_WORKSPACE }}
