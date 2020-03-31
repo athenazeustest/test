@@ -31,17 +31,12 @@ jobs:
         pwd
         tree
       
-    - name: Workspace dir
-      run: echo $GITHUB_WORKSPACE
-  
-    - name: two
-      run: pwd
-      working-directory: ${{ github.workspace }}
-
     - name: Build
-      run: build.bash
-      working-directory: github.workspace
+      run: |
+        pwd
+        build.bash
 
     - name: Run Tests
-      run: run_tests.bash
-      working-directory: ${{ github.workspace }}
+      run: |
+        pwd
+        run_tests.bash
