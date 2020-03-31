@@ -23,15 +23,18 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Install bash
+      run: sudo apt install bash -y
 
     - name: Default working dir
       run: pwd
+      
+    - name: Workspace dir
+      run: echo $GITHUB_WORKSPACE
 
     - name: Build
       run: build.bash
-      working-directory: ${{ github.workspace }}}
+      working-directory: ${{ github.workspace }}
 
     - name: Run Tests
       run: run_tests.bash
