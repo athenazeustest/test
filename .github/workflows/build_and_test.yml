@@ -34,9 +34,9 @@ jobs:
     - name: Build
       run: |
         pwd
-        build.bash
+        ./build.bash
 
     - name: Run Tests
       run: |
         pwd
-        run_tests.bash
+        ./run_tests.bash
