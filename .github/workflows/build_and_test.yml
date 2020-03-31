@@ -34,9 +34,17 @@ jobs:
     - name: Workspace dir
       run: echo $GITHUB_WORKSPACE
 
+    - name: one
+      run: pwd
+      working-directory: github.workspace
+  
+    - name: two
+      run: pwd
+      working-directory: ${{ github.workspace }}
+
     - name: Build
       run: build.bash
-      working-directory: ${{ github.workspace }}
+      working-directory: github.workspace
 
     - name: Run Tests
       run: run_tests.bash
